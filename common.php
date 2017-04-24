@@ -32,7 +32,7 @@ if (file_exists('config.ini')) {
 // overwrite config with ENV variables
 $env_prefix = $f3->get('env_prefix');
 foreach ($f3->get('ENV') as $key => $value) {
-    if (strncasecmp($key, $env_prefix, strlen($env_prefix)) == 0) {
+    if (strncasecmp($key, $env_prefix, strlen($env_prefix)) === 0) {
         $f3->set(strtolower(substr($key, strlen($env_prefix))), $value);
     }
 }
@@ -80,5 +80,5 @@ $f3->set('ONERROR',
 );
 
 if (\F3::get('DEBUG') != 0) {
-    ini_set('display_errors', 0);
+    ini_set('display_errors', '0');
 }
