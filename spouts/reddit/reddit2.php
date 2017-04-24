@@ -173,7 +173,7 @@ class reddit2 extends \spouts\spout {
             return $id;
         }
 
-        return false;
+        return null;
     }
 
     /**
@@ -186,7 +186,7 @@ class reddit2 extends \spouts\spout {
             return @current($this->items)['data']['title'];
         }
 
-        return false;
+        return null;
     }
 
     /**
@@ -201,7 +201,7 @@ class reddit2 extends \spouts\spout {
             return @current($this->items)['data']['url'];
         }
 
-        return false;
+        return null;
     }
 
     /**
@@ -239,7 +239,7 @@ class reddit2 extends \spouts\spout {
             return $data['url'];
         }
 
-        return false;
+        return null;
     }
 
     /**
@@ -267,7 +267,7 @@ class reddit2 extends \spouts\spout {
             return 'https://www.reddit.com' . @current($this->items)['data']['permalink'];
         }
 
-        return false;
+        return null;
     }
 
     /**
@@ -280,7 +280,7 @@ class reddit2 extends \spouts\spout {
             return @current($this->items)['data']['thumbnail'];
         }
 
-        return false;
+        return null;
     }
 
     /**
