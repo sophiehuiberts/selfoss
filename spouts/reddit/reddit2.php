@@ -322,7 +322,7 @@ class reddit2 extends \spouts\spout {
      * @throws \RuntimeException if the response body is not in JSON format
      * @throws \Exception if the credentials are invalid
      */
-    private function login($params) {
+    private function login(array $params) {
         $http = WebClient::getHttpClient();
         $response = $http->post("https://ssl.reddit.com/api/login/{$params['username']}", [
             'body' => [

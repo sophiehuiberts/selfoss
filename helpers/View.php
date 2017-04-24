@@ -113,7 +113,7 @@ class View {
     /**
      * send error message as json string
      *
-     * @param mixed $datan
+     * @param mixed $data
      *
      * @return void
      */
@@ -125,7 +125,7 @@ class View {
     /**
      * send success message as json string
      *
-     * @param mixed $datan
+     * @param mixed $data
      *
      * @return void
      */
