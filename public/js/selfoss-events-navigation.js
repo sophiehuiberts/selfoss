@@ -158,7 +158,7 @@ selfoss.events.navigation = function() {
 
     // updates sources
     $('#nav-refresh').unbind('click').click(function() {
-        $('#nav-refresh').addClass('loading');
+        $('#nav-refresh').find('svg').addClass('fa-spin');
 
         $.ajax({
             url: $('base').attr('href') + 'update',
@@ -186,7 +186,7 @@ selfoss.events.navigation = function() {
                 selfoss.ui.showError('Cannot refresh sources: ' + errorThrown);
             },
             complete: function() {
-                $('#nav-refresh').removeClass('loading');
+                $('#nav-refresh').find('svg').removeClass('fa-spin');
             }
         });
     });

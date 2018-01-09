@@ -2,48 +2,50 @@ selfoss.shares = {
     initialized: false,
     sharers: {},
     names: {},
+    icons: {},
     enabledShares: '',
 
     init: function(enabledShares) {
         this.enabledShares = enabledShares;
         this.initialized = true;
 
-        this.register('delicious', 'd', function(url, title) {
+        this.register('delicious', 'd', 'fab fa-delicious', function(url, title) {
             window.open('https://delicious.com/save?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title));
         });
-        this.register('googleplus', 'g', function(url) {
+        this.register('googleplus', 'g', 'fab fa-google-plus-g', function(url) {
             window.open('https://plus.google.com/share?url=' + encodeURIComponent(url));
         });
-        this.register('twitter', 't', function(url, title) {
+        this.register('twitter', 't', 'fab fa-twitter', function(url, title) {
             window.open('https://twitter.com/intent/tweet?source=webclient&text=' + encodeURIComponent(title) + ' ' + encodeURIComponent(url));
         });
-        this.register('facebook', 'f', function(url, title) {
+        this.register('facebook', 'f', 'fab fa-facebook', function(url, title) {
             window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&t=' + encodeURIComponent(title));
         });
-        this.register('pocket', 'p', function(url, title) {
+        this.register('pocket', 'p', 'fab fa-get-pocket', function(url, title) {
             window.open('https://getpocket.com/save?url=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(title));
         });
-        this.register('wallabag', 'w', function(url) {
+        this.register('wallabag', 'w', 'fac fa-wallabag', function(url) {
             if ($('#config').data('wallabag_version') == 2) {
                 window.open($('#config').data('wallabag') + '/bookmarklet?url=' + encodeURIComponent(url));
             } else {
                 window.open($('#config').data('wallabag') + '/?action=add&url=' + btoa(url));
             }
         });
-        this.register('wordpress', 's', function(url, title) {
+        this.register('wordpress', 's', 'fab fa-wordpress-simple', function(url, title) {
             window.open($('#config').data('wordpress') + '/wp-admin/press-this.php?u=' + encodeURIComponent(url) + '&t=' + encodeURIComponent(title));
         });
-        this.register('mail', 'e', function(url, title) {
+        this.register('mail', 'e', 'far fa-envelope', function(url, title) {
             document.location.href = 'mailto:?body=' + encodeURIComponent(url) + '&subject=' + encodeURIComponent(title);
         });
     },
 
-    register: function(name, id, sharer) {
+    register: function(name, id, icon, sharer) {
         if (!this.initialized) {
             return false;
         }
         this.sharers[name] = sharer;
         this.names[id] = name;
+        this.icons[name] = this.fontawesomeIcon(icon);
         return true;
     },
 
@@ -73,5 +75,9 @@ selfoss.shares = {
             }
         }
         return links;
-    }
+    },
+
+    fontawesomeIcon: function(service) {
+        return '<i class="' + service + '"></i>';
+    },
 };

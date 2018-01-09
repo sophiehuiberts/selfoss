@@ -282,28 +282,17 @@ body * {
         height:45px;
         border-radius:2px;
         cursor:pointer;
-    }
-    
-    #nav-refresh {
-        background:url(images/nav-refresh.png) no-repeat center center #272325;
+        background: #272325;
     }
 
-    #nav-refresh.loading {
-        background:url(images/ajax-loader.gif) center center no-repeat;
-    }
-    
     #nav-settings {
-        background:url(images/nav-sources.png) no-repeat center center #272325;
         left:70px;
     }
-        
     #nav-logout {
-        background:url(images/nav-logout.png) no-repeat center center #272325;
         left:120px;
-    }    
-    
+    }
+
     #nav-login {
-        background:url(images/nav-login.png) no-repeat center center #272325;
         width:140px;
     }
 
@@ -369,19 +358,11 @@ body * {
         background: transparent;
         padding: 0;
         border: none;
-        position:absolute;
-        width:30px;
-        height:20px;
-        top:11px;
-        left:280px;
-        cursor:pointer;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
     }
-    
-    #search-button {
-        left:305px;
-    }
-    
-    
+
 #search-list  {
     display:none;
     margin-left:220px;
@@ -393,14 +374,9 @@ body * {
         margin-left:10px;
         color:#ffffff;
         padding-left:5px;
-        padding-right:15px;
+        padding-right: 8px;
         font-size:0.85em;
-        background: url(images/remove-small.png) no-repeat right center #3d6d69;
-        border-right:6px solid #3d6d69;
-        -webkit-border-top-right-radius: 4px;
-        -webkit-border-bottom-right-radius: 4px;
-        -moz-border-radius-topright: 4px;
-        -moz-border-radius-bottomright: 4px;
+        background-color: #3d6d69;
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
         cursor:pointer;
@@ -629,14 +605,8 @@ body * {
             background-color: transparent;
             color: black;
             border: none;
-            padding: 1px 0 0 20px;
-            margin-left:10px;
-			margin-top:5px;
             float: left;
             cursor:pointer;
-            background-size:16px 16px;
-            background-repeat:no-repeat;
-            background-position: left center;
             vertical-align: middle;
         }
 
@@ -645,39 +615,12 @@ body * {
             outline: 1px dotted #aaa;
         }
 
-        .entry-toolbar .entry-starr {
-            background-image:url(images/unstarred.png);
-        }
-        
-        .entry-toolbar .entry-starr.active {
-            background-image:url(images/starred.png);
-        }
-        
-        .entry-toolbar .entry-unread {
-            background-image:url(images/read.png);
-        }
-        
-        .entry-toolbar .entry-unread.active {
-            background-image:url(images/unread.png);
-        }
-        
         .entry-toolbar .entry-loadimages {
             display:none;
-            background-image:url(images/arrow-down.png);
-        }
-        
-        .entry-newwindow {
-            background-image:url(images/open.png);
         }
 
         .entry-next {
-            background-image:url(images/arrow-right.png);
             display:none;
-        }
-
-        .entry-smartphone-share .entry-share,
-        .entry-toolbar .entry-share {
-            padding: 0;
         }
 
         .entry-toolbar .entry-close {
@@ -689,8 +632,6 @@ body * {
             left:100%;
             top:0;
             margin-left:-60px;
-            background:url(images/close.png) center center no-repeat;
-            background-size: 28px 28px;
         }
         
     
@@ -1200,13 +1141,8 @@ body.authenabled.loggedin #nav-logout {
 
         #nav-mobile-settings {
             position:absolute;
-            width:29px;
-            height:29px;
-            left:100%;
-            margin-left:-66px;
-            background:url(images/nav-mobile-settings.png) no-repeat center;
-            background-size:29px 29px;
-            padding:11px 21px 11px 15px;
+            top: 8px;
+            right: 8px;
         }
         
     #nav {
@@ -1397,8 +1333,8 @@ body.authenabled.loggedin #nav-logout {
     }
     
         .entry-smartphone-share button {
-            margin-right:10px;
-            margin-bottom:5px;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
             list-style:none;
             display:block;
         }

@@ -60,10 +60,10 @@ selfoss.ui = {
         // update button
         if (starred) {
             button.addClass('active');
-            button.html($('#lang').data('unstar'));
+            button.html('<i class="far fa-star"></i> ' + $('#lang').data('unstar'));
         } else {
             button.removeClass('active');
-            button.html($('#lang').data('star'));
+            button.html('<i class="fas fa-star"></i> ' + $('#lang').data('star'));
         }
     },
 
@@ -75,11 +75,11 @@ selfoss.ui = {
         // update button and entry style
         if (unread) {
             button.addClass('active');
-            button.html($('#lang').data('mark'));
+            button.html('<i class="fas fa-check-circle"></i> ' + $('#lang').data('mark'));
             parent.addClass('unread');
         } else {
             button.removeClass('active');
-            button.html($('#lang').data('unmark'));
+            button.html('<i class="far fa-check-circle"></i> ' + $('#lang').data('unmark'));
             parent.removeClass('unread');
         }
     },

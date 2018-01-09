@@ -70,18 +70,18 @@
         <?= $content; ?>
 
         <div class="entry-smartphone-share">
-            <button class="entry-newwindow"><?= \F3::get('lang_open_window')?></button>
-            <button class="entry-next"><?= \F3::get('lang_next')?></button>
+            <button class="entry-newwindow"><i class="fas fa-external-link-alt"></i> <?= \F3::get('lang_open_window')?></button>
+            <button class="entry-next"><i class="fas fa-arrow-right"></i> <?= \F3::get('lang_next')?></button>
         </div>
     </div>
 
     <!-- toolbar -->
     <div class="entry-toolbar">
-        <button class="entry-starr <?= $this->item['starred'] == 1 ? 'active' : ''; ?>"><?= $this->item['starred'] == 1 ? \F3::get('lang_unstar') : \F3::get('lang_star'); ?></button>
-        <button class="entry-unread <?= $this->item['unread'] == 1 ? 'active' : ''; ?>"><?= $this->item['unread'] == 1 ? \F3::get('lang_mark') : \F3::get('lang_unmark'); ?></button>
-        <button class="entry-newwindow"><?= \F3::get('lang_open_window')?></button>
-        <button class="entry-loadimages"><?= \F3::get('lang_load_img')?> </button>
-        <button class="entry-next"><?= \F3::get('lang_next')?></button>
-        <button class="entry-close"></button>
+        <button class="entry-starr <?= $this->item['starred'] == 1 ? 'active' : ''; ?>"><i class="fa<?= $this->item['starred'] == 1 ? 'r' : 's'; ?> fa-star"></i> <?= $this->item['starred'] == 1 ? \F3::get('lang_unstar') : \F3::get('lang_star'); ?></button>
+        <button class="entry-unread <?= $this->item['unread'] == 1 ? 'active' : ''; ?>"><i class="fa<?= $this->item['unread'] == 1 ? 's' : 'r'; ?> fa-check-circle"></i> <?= $this->item['unread'] == 1 ? \F3::get('lang_mark') : \F3::get('lang_unmark'); ?></button>
+        <button class="entry-newwindow"><i class="fas fa-external-link-alt"></i> <?= \F3::get('lang_open_window')?></button>
+        <button class="entry-loadimages"><i class="fas fa-arrow-alt-circle-down"></i> <?= \F3::get('lang_load_img')?> </button>
+        <button class="entry-next"><i class="fas fa-arrow-right"></i> <?= \F3::get('lang_next')?></button>
+        <button class="entry-close"><i class="far fa-times-circle fa-2x"></i></button>
     </div>
 </div>

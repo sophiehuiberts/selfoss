@@ -105,7 +105,7 @@
         <!-- menu open for smartphone -->
         <div id="nav-mobile">
             <div id="nav-mobile-logo"><span class="unread-count"></span></div>
-            <div id="nav-mobile-settings"></div>
+            <div id="nav-mobile-settings"><i class="fas fa-cog fa-2x"></i></div>
         </div>
 
         <!-- navigation -->
@@ -142,12 +142,12 @@
                 <hr>
             </div>
 
-            <button id="nav-refresh" title="<?= trim(\F3::get('lang_refreshbutton')); ?>"></button>
-            <button id="nav-settings" title="<?= trim(\F3::get('lang_settingsbutton')); ?>"></button>
-            <button id="nav-logout" title="<?= trim(\F3::get('lang_logoutbutton')); ?>"></button>
+            <button id="nav-refresh" title="<?= trim(\F3::get('lang_refreshbutton')); ?>"><i class="fa fa-sync"></i></button>
+            <button id="nav-settings" title="<?= trim(\F3::get('lang_settingsbutton')); ?>"><i class="fa fa-cloud-upload-alt"></i></button>
+            <button id="nav-logout" title="<?= trim(\F3::get('lang_logoutbutton')); ?>"><i class="fa fa-sign-out-alt"></i></button>
 
             <?php if ($this->publicMode === true) : ?>
-            <button id="nav-login" title="<?= trim(\F3::get('lang_loginbutton')); ?>"></button>
+            <button id="nav-login" title="<?= trim(\F3::get('lang_loginbutton')); ?>"><i class="fa fa-key"></i></button>
             <?php endif; ?>
 
             <a id="nav-copyright" href="https://selfoss.aditu.de" target="_blank" rel="noopener noreferrer">selfoss <?= \F3::get('version'); ?></a>
@@ -156,8 +156,8 @@
         <!-- search -->
         <div id="search" role="search">
             <input type="search" id="search-term">
-            <button id="search-remove" title="<?= \F3::get('lang_searchremove')?>"><img src="images/remove.png" alt=""></button>
-            <button id="search-button" title="<?= \F3::get('lang_searchbutton')?>"><img src="images/search.png" alt=""></button>
+            <button id="search-remove" title="<?= \F3::get('lang_searchremove')?>"><i class="fa fa-times"></i></button>
+            <button id="search-button" title="<?= \F3::get('lang_searchbutton')?>"><i class="fa fa-search"></i></button>
         </div>
 
         <ul id="search-list">

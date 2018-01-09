@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@fancyapps/fancybox": "^3.1.20",
+    "@fortawesome/fontawesome-free": "^5.1.0",
     "jquery": "^2.2.4",
     "jquery-hotkeys": "^0.2.2",
     "jquery-mousewheel": "^3.1.13",
@@ -21,6 +22,7 @@
         "public/node_modules/jquery/dist/jquery.js",
         "public/node_modules/jquery-mousewheel/jquery.mousewheel.js",
         "public/node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js",
+        "public/node_modules/@fortawesome/fontawesome-free/js/all.js",
         "public/js/lazy-image-loader.js",
         "public/node_modules/js-cookie/src/js.cookie.js",
         "public/node_modules/spectrum-colorpicker/spectrum.js",
