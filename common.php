@@ -31,9 +31,18 @@ if (file_exists('config.ini')) {
 
 // overwrite config with ENV variables
 $env_prefix = $f3->get('env_prefix');
-foreach ($f3->get('ENV') as $key => $value) {
-    if (strncasecmp($key, $env_prefix, strlen($env_prefix)) == 0) {
-        $f3->set(strtolower(substr($key, strlen($env_prefix))), $value);
+foreach ($f3->get('ENV') as $envKey => $value) {
+    // if variable name starts with $env_prefix
+    if (strncasecmp($envKey, $env_prefix, strlen($env_prefix)) == 0) {
+        $key = substr($envKey, strlen($env_prefix)); // remove the prefix
+
+        // most keys are lowercase but there are some exceptions and
+        // we still want to be able to set them using environment variable
+        if (!in_array($key, ['BASEDIR', 'DATADIR'])) {
+            $key = strtolower($key);
+        }
+
+        $f3->set($key, $value);
     }
 }
 
