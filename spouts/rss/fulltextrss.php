@@ -48,7 +48,7 @@ class fulltextrss extends feed {
             $this->graby = new Graby([
                 'extractor' => [
                     'config_builder' => [
-                        'site_config' => [\F3::get('FTRSS_CUSTOM_DATA_DIR')],
+                        'site_config' => [\F3::get('DATADIR') . '/fulltextrss'],
                     ],
                 ],
             ], WebClient::getHttpClient());

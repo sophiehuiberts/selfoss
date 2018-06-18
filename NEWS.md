@@ -26,6 +26,7 @@
       window.open('http://moo.foobar/share?u=' + encodeURIComponent(url) + '&t=' + encodeURIComponent(title));
   });
   ```
+- Custom FullTextRss filter were moved to `fulltextrss` directory in data directory ([#1043](https://github.com/SSilence/selfoss/pull/1043))
 
 ### Other changes
 - Removed broken instapaper scraping from Reddit spout ([#1033](https://github.com/SSilence/selfoss/pull/1033))
