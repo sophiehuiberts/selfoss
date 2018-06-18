@@ -334,6 +334,10 @@ db_port=3306</code>
                         <td class="documentation-first-column">show_thumbnails</td>
                         <td>If set to false, thumbnails are not shown in the collapsed view. Defaults to true.</td>
                     </tr>
+                    <tr>
+                        <td class="documentation-first-column" id="datadir">DATADIR</td>
+                        <td>location of the data directory, especially useful when selfoss is installed to write-protected file system. <strong>Note:</strong> Other configuration keys like <code>cache</code>, <code>FTRSS_CUSTOM_DATA_DIR</code>, <code>db_file</code> and <code>logger_destination</code> default to the data directory in the selfoss installation so they need to be adjusted as well. <code>.htaccess</code> file (or web server configuration for other web servers) will also need to be modified accordingly.</td>
+                    </tr>
                 </table>
             </div>
 

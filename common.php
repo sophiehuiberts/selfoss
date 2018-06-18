@@ -18,6 +18,7 @@ $f3->set('version', '2.19-SNAPSHOT');
 $f3->set('AUTOLOAD', false);
 $f3->set('cache', __DIR__ . '/data/cache');
 $f3->set('BASEDIR', __DIR__);
+$f3->set('DATADIR', __DIR__ . '/data');
 $f3->set('LOCALES', __DIR__ . '/public/lang/');
 $f3->set('FTRSS_CUSTOM_DATA_DIR', __DIR__ . '/data/fulltextrss/custom');
 
